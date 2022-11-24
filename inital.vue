@@ -11,8 +11,11 @@ if (typeof window !== 'undefined') {
   $axios.defaults.headers.common = header
 }
 
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 const data = await useAsyncData(
+  'app',
   async () => {
+    await sleep(1000)
     return $axios.get('/').then((data) => data.data)
   },
   { pick: ['appName', 'seo'] },

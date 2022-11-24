@@ -1,0 +1,12 @@
+<template>
+  <div class="layout">
+    <slot> </slot>
+  </div>
+</template>
+
+<style>
+.layout {
+  padding: 20px;
+  background: #f0f0f0;
+}
+</style>

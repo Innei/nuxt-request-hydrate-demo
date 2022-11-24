@@ -1,13 +1,15 @@
 <template>
-  <div>
-    {{ error?.message || 'unknown error' }}
-  </div>
-  <button @click="handleError">refresh</button>
+  <InitialDataWrapper>
+    <NuxtLayout>
+      <ErrorInner :error="props.error" />
+    </NuxtLayout>
+  </InitialDataWrapper>
 </template>
 
 <script setup>
+import ErrorInner from './error-inner.vue'
+import InitialDataWrapper from './inital.vue'
 const props = defineProps({
   error: Object,
 })
-const handleError = () => clearError({ redirect: '/' })
 </script>

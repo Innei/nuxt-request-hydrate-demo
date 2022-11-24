@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <h1>Nuxt App Layout</h1>
-  </div>
-
-  <InitialDataWrapper>
-    <RouterView></RouterView>
-  </InitialDataWrapper>
+  <NuxtLayout>
+    <InitialDataWrapper>
+      <RouterView></RouterView>
+    </InitialDataWrapper>
+  </NuxtLayout>
 </template>
 
 <script lang="ts" setup>
