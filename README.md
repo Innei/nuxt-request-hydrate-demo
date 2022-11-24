@@ -2,7 +2,7 @@
 
 TODO: 
 
-- [ ] hydrate ssr initial request status code
+- [x] hydrate ssr initial request status code
 - [x] error page layout
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

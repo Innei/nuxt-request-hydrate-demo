@@ -15,7 +15,13 @@ const response = await useAsyncData(async () => {
 })
 
 if (response.error.value) {
-  throw createError(response.error.value?.message || '')
+  throw createError({
+    statusCode: response.error.value.response.status,
+    statusMessage: 'Page Not Found',
+    message:
+      response.error.value.response.data.message ||
+      response.error.value.message,
+  })
 }
 const appData = useAppData()
 </script>

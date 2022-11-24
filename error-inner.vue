@@ -14,5 +14,8 @@ const props = defineProps({
 })
 const handleError = () => clearError({ redirect: '/' })
 
+if (typeof window === 'undefined' && props.error.statusCode) {
+  setResponseStatus(props.error.statusCode)
+}
 const app = useAppData()
 </script>
